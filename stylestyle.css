@@ -125,13 +125,20 @@ section.topo-do-site.flex {
     animation: flutuar 4s ease-in-out infinite;
 }
 
-@keyframes flutuar {
-    0% {
-        top: 0;
-    }
+/* Localize esta parte no seu CSS e substitua */
 
-    100% {
-        top: 30px;
+.topo-do-site .img-topo-site img {
+    position: relative;
+    /* 'alternate' para o efeito de ida e volta */
+    animation: flutuar 3s ease-in-out infinite alternate; 
+}
+
+@keyframes flutuar {
+    from {
+        transform: translateY(0px); /* Usar transform é melhor para performance que 'top' */
+    }
+    to {
+        transform: translateY(30px);
     }
 }
 
